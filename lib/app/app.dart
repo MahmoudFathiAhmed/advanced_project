@@ -1,5 +1,6 @@
-import 'package:advanced_project/presentation/theme_manger.dart';
 import 'package:flutter/material.dart';
+
+import '../presentation/resources/theme_manger.dart';
 
 class MyApp extends StatefulWidget {
 //named constructor
