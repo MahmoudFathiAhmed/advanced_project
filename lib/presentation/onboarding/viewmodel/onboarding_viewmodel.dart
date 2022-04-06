@@ -1,7 +1,7 @@
 import 'dart:async';
 
 
-import 'package:advanced_project/domain/models.dart';
+import 'package:advanced_project/domain/model/models.dart';
 import 'package:advanced_project/presentation/base/base_viewmodel.dart';
 
 import '../../resources/assets_manager.dart';
