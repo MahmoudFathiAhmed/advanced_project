@@ -4,6 +4,7 @@ import 'package:advanced_project/presentation/resources/strings_manager.dart';
 import 'package:advanced_project/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
+import '../../../app/di.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/routes_manager.dart';
 
@@ -15,7 +16,8 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  final LoginViewModel _viewModel = LoginViewModel();
+
+  final LoginViewModel _viewModel = instance<LoginViewModel>();
   final TextEditingController _userNameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();

@@ -4,6 +4,7 @@ import 'package:advanced_project/presentation/resources/strings_manager.dart';
 import 'package:advanced_project/presentation/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../app/di.dart';
 import '../login/view/login_view.dart';
 import '../main/main_view.dart';
 import '../onboarding/view/onboarding_view.dart';
@@ -26,6 +27,7 @@ class RouteGenerator{
         case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (_)=> const OnBoardingView());
       case Routes.loginRoute:
+        initLoginModule();
         return MaterialPageRoute(builder: (_)=> const LoginView());
       case Routes.registerRoute:
         return MaterialPageRoute(builder: (_)=> const RegisterView());
