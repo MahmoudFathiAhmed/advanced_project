@@ -4,7 +4,9 @@ import 'package:advanced_project/presentation/resources/color_manager.dart';
 import 'package:advanced_project/presentation/resources/strings_manager.dart';
 import 'package:advanced_project/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
+import '../../../app/app_prefs.dart';
 import '../../../app/di.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/routes_manager.dart';
@@ -19,6 +21,7 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
 
   final LoginViewModel _viewModel = instance<LoginViewModel>();
+  final AppPreferences _appPreferences = instance<AppPreferences>();
   final TextEditingController _userNameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
@@ -26,7 +29,16 @@ class _LoginViewState extends State<LoginView> {
   _bind(){
     _viewModel.start();// tell view model, start ur job
     _userNameController.addListener(() =>_viewModel.setUserName(_userNameController.text));
-    _userNameController.addListener(() =>_viewModel.setPassword(_passwordController.text));
+    _passwordController.addListener(() =>_viewModel.setPassword(_passwordController.text));
+    _viewModel.isUserLoggedInSuccessfullyStreamController.stream.listen((isLoggedIn) {
+      if(isLoggedIn){
+        //navigate to main screen
+        SchedulerBinding.instance?.addPostFrameCallback((_) {
+          _appPreferences.setUserLoggedIn();
+          Navigator.of(context).pushReplacementNamed(Routes.mainRoute);
+        });
+      }
+    });
   }
 
   @override
@@ -100,7 +112,7 @@ class _LoginViewState extends State<LoginView> {
                 Padding(
                   padding: const EdgeInsets.only(left: AppPadding.p28, right: AppPadding.p28),
                   child: StreamBuilder<bool>(
-                    stream: _viewModel.outAreAllOutputsValid,
+                    stream: _viewModel.outAreAllInputsValid,
                     builder: (context, snapshot){
                       return SizedBox(
                         height: AppSize.s40,
