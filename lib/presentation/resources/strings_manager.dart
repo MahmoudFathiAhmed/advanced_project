@@ -16,9 +16,12 @@ class AppStrings{
   static const password = "password";
   static const usernameError = "Please Enter your username";
   static const passwordError = "Please Enter your password";
+  static const invalidEmail = "Invalid Email";
+  static const resetPassword = "ResetPassword";
   static const login = "Login";
   static const forgetPassword = "Forget Password";
-  static const  registerText = "Not a member ? Sign up";
+  static const registerText = "Not a member ? Sign up";
+  static const emailHint = "Email";
 
   static const loading = "Loading...";
   static const retryAgain = "Retry Again";

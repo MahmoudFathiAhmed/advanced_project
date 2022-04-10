@@ -95,8 +95,6 @@ class LoginViewModel extends BaseViewModel with LoginViewModelInputs, LoginViewM
         loginObject.password) &&
         _isUserNameValid(loginObject.userName);
   }
-
-
 }
 
 abstract class LoginViewModelInputs{
