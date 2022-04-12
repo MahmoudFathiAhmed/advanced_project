@@ -10,6 +10,7 @@ enum StateRendererType{
   //POPUP STATES (DIALOG)
   popupLoadingState,
   popupErrorState,
+  popupSuccess,
   //FULL SCREEN STATES (FULL SCREEN)
   fullScreenLoadingState,
   fullScreenErrorState,
@@ -63,6 +64,13 @@ class StateRenderer extends StatelessWidget {
         ]);
       case StateRendererType.contentState:
         return Container();
+      case StateRendererType.popupSuccess:
+        return _getPopupDialog(context, [
+          _getAnimatedImage(JsonAssets.success),
+          _getMessage(title),
+          _getMessage(message),
+          _getRetryButton(AppStrings.ok, context)
+        ]);
       default:
         return Container();
     }
@@ -105,11 +113,11 @@ class StateRenderer extends StatelessWidget {
     );
   }
 
-  Widget _getAnimatedImage(String annimationName){
+  Widget _getAnimatedImage(String animationName){
     return SizedBox(
       height: AppSize.s100,
       width: AppSize.s100,
-      child: Lottie.asset(annimationName)
+      child: Lottie.asset(animationName)
     );
   }
 

@@ -16,12 +16,22 @@ class AppStrings{
   static const password = "password";
   static const usernameError = "Please Enter your username";
   static const passwordError = "Please Enter your password";
-  static const invalidEmail = "Invalid Email";
+  static const invalidEmail = "E-mail format is wrong";
   static const resetPassword = "ResetPassword";
+  static const success = "success";
   static const login = "Login";
   static const forgetPassword = "Forget Password";
   static const registerText = "Not a member ? Sign up";
   static const emailHint = "Email";
+  static const userNameInvalid = "User name should be at least 8 chars";
+  static const mobileNumberInvalid = "Mobile Number should be at least 10 digits";
+  static const passwordInvalid = "Password should be at least 6 chars";
+  static const alreadyHaveAccount = "Already Have Account ? Login";
+  static const register = "Register";
+  static const mobileNumber = "Mobile Number";
+  static const profilePicture = "Profile Picture";
+  static const photoGallery = "Photo from gallery";
+  static const photoCamera = "Photo from camera";
 
   static const loading = "Loading...";
   static const retryAgain = "Retry Again";

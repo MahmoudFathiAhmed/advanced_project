@@ -1,5 +1,5 @@
 import 'package:advanced_project/presentation/forgot_password/view/forgot_password_view.dart';
-import 'package:advanced_project/presentation/regiser/register_view.dart';
+import 'package:advanced_project/presentation/regiser/view/register_view.dart';
 import 'package:advanced_project/presentation/resources/strings_manager.dart';
 import 'package:advanced_project/presentation/splash/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +30,7 @@ class RouteGenerator{
         initLoginModule();
         return MaterialPageRoute(builder: (_)=> const LoginView());
       case Routes.registerRoute:
+        initRegisterModule();
         return MaterialPageRoute(builder: (_)=> const RegisterView());
       case Routes.forgotPasswordRoute:
         initForgotPasswordModule();
