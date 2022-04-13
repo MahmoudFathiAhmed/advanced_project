@@ -16,7 +16,7 @@ class RegisterObject with _$RegisterObject{
   String mobileNumber,
   String email,
   String password,
-  String profilePicture,
+  String profilePicture
       ) = _registerObject;
 }
 

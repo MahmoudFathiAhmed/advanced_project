@@ -17,6 +17,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
   StreamController passwordStreamController = StreamController<String>.broadcast();
   StreamController profilePictureStreamController = StreamController<File>.broadcast();
   StreamController areAllInputsValidStreamController = StreamController<void>.broadcast();
+  StreamController isUserRegisteredSuccessfullyStreamController = StreamController<bool>();
 
   final RegisterUseCase _registerUseCase;
   var registerObject = RegisterObject("", "", "", "", "", "");
@@ -37,6 +38,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
     passwordStreamController.close();
     profilePictureStreamController.close();
     areAllInputsValidStreamController.close();
+    isUserRegisteredSuccessfullyStreamController.close();
     super.dispose();
   }
 
@@ -67,9 +69,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
       registerObject.mobileNumber,
       registerObject.email,
       registerObject.password,
-      registerObject.profilePicture,
-
-    )))
+      registerObject.profilePicture)))
         .fold((failure) => {
       //left -> failure
       inputState.add(ErrorState(StateRendererType.popupErrorState, failure.message))
@@ -78,7 +78,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
       //content
       inputState.add(ContentState());
       //navigate to main screen
-      // isUserLoggedInSuccessfullyStreamController.add(true);
+      isUserRegisteredSuccessfullyStreamController.add(true);
     });
   }
 
@@ -151,7 +151,8 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
     inputProfilePicture.add(profilePicture);
     if(profilePicture.path.isNotEmpty){
       //update register view object
-      registerObject = registerObject.copyWith(profilePicture: profilePicture.path);
+      registerObject =
+          registerObject.copyWith(profilePicture: profilePicture.path);
     }else{
       //reset profile picture value in register view object
       registerObject = registerObject.copyWith(profilePicture: "");
@@ -196,7 +197,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
   Stream<File> get outputProfilePicture => profilePictureStreamController.stream.map((file) => file);
 
   @override
-  Stream<bool> get outputAreAllInputValid => areAllInputsValidStreamController.stream.map((_) => _areAllInputsValid());
+  Stream<bool> get outputAreAllInputsValid => areAllInputsValidStreamController.stream.map((_) => _areAllInputsValid());
 
   //private functions
   bool _isUserNameValid(String userName){
@@ -212,14 +213,12 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
   }
 
   bool _areAllInputsValid(){
-    return
-      registerObject.countryMobileCode.isNotEmpty &&
+    return registerObject.countryMobileCode.isNotEmpty &&
       registerObject.mobileNumber.isNotEmpty &&
       registerObject.userName.isNotEmpty &&
       registerObject.email.isNotEmpty &&
       registerObject.password.isNotEmpty &&
-      registerObject.profilePicture.isNotEmpty
-    ;
+      registerObject.profilePicture.isNotEmpty;
   }
 
   validate(){
@@ -259,5 +258,5 @@ abstract class RegisterViewModelOutput{
 
   Stream <File> get outputProfilePicture;
 
-  Stream <bool> get outputAreAllInputValid;
+  Stream <bool> get outputAreAllInputsValid;
 }

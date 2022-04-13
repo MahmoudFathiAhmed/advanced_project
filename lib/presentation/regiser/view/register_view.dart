@@ -7,11 +7,14 @@ import 'package:advanced_project/presentation/resources/color_manager.dart';
 import 'package:advanced_project/presentation/resources/values_manager.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../../app/app_prefs.dart';
 import '../../../app/constants.dart';
 import '../../resources/assets_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../../resources/strings_manager.dart';
 
 class RegisterView extends StatefulWidget {
@@ -25,6 +28,7 @@ class _RegisterViewState extends State<RegisterView> {
 
 
   final RegisterViewModel _viewModel = instance<RegisterViewModel>();
+  final AppPreferences _appPreferences = instance<AppPreferences>();
   final ImagePicker _imagePicker = instance<ImagePicker>();
   final  _formKey = GlobalKey<FormState>();
 
@@ -35,17 +39,31 @@ class _RegisterViewState extends State<RegisterView> {
 
   _bind(){
     _viewModel.start();
-    _userNameTextEditingController.addListener(() { });
+    _userNameTextEditingController.addListener(() {
     _viewModel.setUserName(_userNameTextEditingController.text);
+    });
 
-    _emailTextEditingController.addListener(() { });
+    _emailTextEditingController.addListener(() {
     _viewModel.setEmail(_emailTextEditingController.text);
+    });
 
-    _passwordTextEditingController.addListener(() { });
+    _passwordTextEditingController.addListener(() {
     _viewModel.setPassword(_passwordTextEditingController.text);
+    });
 
-    _mobileNumberTextEditingController.addListener(() { });
+    _mobileNumberTextEditingController.addListener(() {
     _viewModel.setMobileNumber(_mobileNumberTextEditingController.text);
+    });
+
+    _viewModel.isUserRegisteredSuccessfullyStreamController.stream.listen((isRegistered) {
+      if(isRegistered){
+        //navigate to main screen
+        SchedulerBinding.instance?.addPostFrameCallback((_) {
+          _appPreferences.setUserLoggedIn();
+          Navigator.of(context).pushReplacementNamed(Routes.mainRoute);
+        });
+      }
+    });
   }
 
   @override
@@ -113,7 +131,7 @@ class _RegisterViewState extends State<RegisterView> {
                         child: CountryCodePicker(
                           onChanged: (country){
                             //update view model with code
-                            _viewModel.setCountryCode(country.code??Constants.token);
+                            _viewModel.setCountryCode(country.dialCode??Constants.token);
                           },
                           initialSelection: '+20',
                           favorite: const ['+39','FR','+966'],
@@ -199,17 +217,20 @@ class _RegisterViewState extends State<RegisterView> {
               ),
               const SizedBox(height: AppSize.s40,),
               Padding(
-                padding: const EdgeInsets.only(left: AppPadding.p28, right: AppPadding.p28),
+                padding: const EdgeInsets.only(
+                    left: AppPadding.p28, right: AppPadding.p28),
                 child: StreamBuilder<bool>(
-                  stream: _viewModel.outputAreAllInputValid,
+                  stream: _viewModel.outputAreAllInputsValid,
                   builder: (context, snapshot){
                     return SizedBox(
-                      height: AppSize.s40,
                       width: double.infinity,
+                      height: AppSize.s40,
                       child: ElevatedButton(
-                        onPressed: (snapshot.data ?? false)? (){
+                        onPressed: (snapshot.data ?? false)
+                            ? (){
                           _viewModel.register();
-                        }:null,
+                        }
+                        :null,
                         child: const Text(AppStrings.register),
                       ),
                     );
