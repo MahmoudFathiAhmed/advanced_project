@@ -2,11 +2,9 @@ import 'package:advanced_project/presentation/main/pages/home_page.dart';
 import 'package:advanced_project/presentation/main/pages/notifications_page.dart';
 import 'package:advanced_project/presentation/main/pages/search_page.dart';
 import 'package:advanced_project/presentation/main/pages/settings_page.dart';
-import 'package:advanced_project/presentation/resources/assets_manager.dart';
 import 'package:advanced_project/presentation/resources/color_manager.dart';
 import 'package:advanced_project/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../resources/strings_manager.dart';
 
