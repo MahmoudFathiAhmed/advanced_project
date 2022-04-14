@@ -14,6 +14,10 @@ class ImageAssets{
   static const String solidCircleIc = "$imagePath/solid_circle_ic.svg";
   static const String hollowCircleIc = "$imagePath/hollow_circle_ic.svg";
   static const String photoCameraIc = "$imagePath/photo_camera_ic.svg";
+  static const String homeIc = "$imagePath/home_ic.svg";
+  static const String notificationsIc = "$imagePath/notifications_ic.svg";
+  static const String searchIc = "$imagePath/search_ic.svg";
+  static const String settingsIc = "$imagePath/settings_ic.svg";
 }
 
 class JsonAssets{

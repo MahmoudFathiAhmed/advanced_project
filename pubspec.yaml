@@ -84,6 +84,10 @@ flutter:
     - assets/images/solid_circle_ic.svg
     - assets/images/hollow_circle_ic.svg
     - assets/images/photo_camera_ic.svg
+    - assets/images/home_ic.svg
+    - assets/images/notifications_ic.svg
+    - assets/images/search_ic.svg
+    - assets/images/settings_ic.svg
     - assets/json/empty.json
     - assets/json/error.json
     - assets/json/loading.json
