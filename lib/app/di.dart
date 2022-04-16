@@ -18,8 +18,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../data/data_source/local_data_source.dart';
 import '../domain/usecase/home_usecase.dart';
 import '../domain/usecase/register_usecase.dart';
+import '../domain/usecase/store_details_usecase.dart';
 import '../presentation/main/pages/home/viewmodel/home_viewmodel.dart';
 import '../presentation/regiser/viewmodel/register_viewmodel.dart';
+import '../presentation/store_details/viewmodel/store_details_viewmodel.dart';
 
 final instance = GetIt.instance;
 
@@ -89,5 +91,14 @@ initHomeModule() {
         HomeUseCase(instance()));
     instance.registerFactory<HomeViewModel>(() =>
         HomeViewModel(instance()));
+  }
+}
+
+initStoreDetailsModule() {
+  if (!GetIt.I.isRegistered<StoreDetailsUseCase>()) {
+    instance.registerFactory<StoreDetailsUseCase>(() =>
+        StoreDetailsUseCase(instance()));
+    instance.registerFactory<StoreDetailsViewModel>(() =>
+        StoreDetailsViewModel(instance()));
   }
 }

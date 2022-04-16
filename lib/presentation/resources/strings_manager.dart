@@ -38,6 +38,9 @@ class AppStrings{
   static const settings = "Settings";
   static const services = "Services";
   static const stores = "Stores";
+  static const String details = "Details";
+  static const String about = "About Store";
+  static const String storeDetails = "Store details";
 
   static const loading = "Loading...";
   static const retryAgain = "Retry Again";

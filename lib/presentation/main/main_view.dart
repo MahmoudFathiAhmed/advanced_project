@@ -48,7 +48,6 @@ class _MainViewState extends State<MainView> {
         ),
         child: BottomNavigationBar(
           selectedItemColor: ColorManager.primary,
-
           unselectedItemColor: ColorManager.grey,
           currentIndex: _currentIndex,
           onTap: onTab,
