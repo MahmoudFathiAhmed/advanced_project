@@ -15,6 +15,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/data_source/local_data_source.dart';
 import '../domain/usecase/home_usecase.dart';
 import '../domain/usecase/register_usecase.dart';
 import '../presentation/main/pages/home/viewmodel/home_viewmodel.dart';
@@ -46,9 +47,12 @@ Future<void> initAppModule() async{
 
   //remote data source
   instance.registerLazySingleton<RemoteDataSource>(() => RemoteDataSourceImpl(instance()));
-  
+
+  //local data source
+  instance.registerLazySingleton<LocalDataSource>(() => LocalDataSourceImpl());
+
   //repository
-  instance.registerLazySingleton<Repository>(() => RepositoryImpl(instance(), instance()));
+  instance.registerLazySingleton<Repository>(() => RepositoryImpl(instance(), instance(),instance()));
 }
 
 
