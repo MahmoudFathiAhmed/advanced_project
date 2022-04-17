@@ -2,6 +2,7 @@ import 'package:advanced_project/presentation/forgot_password/view/forgot_passwo
 import 'package:advanced_project/presentation/regiser/view/register_view.dart';
 import 'package:advanced_project/presentation/resources/strings_manager.dart';
 import 'package:advanced_project/presentation/splash/splash_view.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/di.dart';
@@ -47,9 +48,9 @@ class RouteGenerator{
   }
   static Route<dynamic> unDefinedRoute(){
     return MaterialPageRoute(builder: (_)=>Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.noRouteFound),),
-      body: const Center(
-        child: Text(AppStrings.noRouteFound),
+      appBar: AppBar(title:  Text(AppStrings.noRouteFound.tr()),),
+      body:  Center(
+        child: Text(AppStrings.noRouteFound.tr()),
       ),
     ),);
   }

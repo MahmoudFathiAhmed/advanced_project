@@ -1,4 +1,5 @@
 import 'package:advanced_project/presentation/forgot_password/viewmodel/forgot_password_viewmodel.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/di.dart';
@@ -69,9 +70,9 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                       keyboardType: TextInputType.emailAddress,
                       controller: _emailTextEditingController,
                       decoration: InputDecoration(
-                          hintText: AppStrings.emailHint,
-                          labelText: AppStrings.emailHint,
-                          errorText: (snapshot.data ?? true)? null:AppStrings.invalidEmail
+                          hintText: AppStrings.emailHint.tr(),
+                          labelText: AppStrings.emailHint.tr(),
+                          errorText: (snapshot.data ?? true)? null:AppStrings.invalidEmail.tr()
                       ),
                     );
                   },
@@ -90,7 +91,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                         onPressed: (snapshot.data ?? false)? (){
                           _viewModel.forgotPassword();
                         }:null,
-                        child: const Text(AppStrings.resetPassword),
+                        child:  Text(AppStrings.resetPassword.tr()),
                       ),
                     );
                   },

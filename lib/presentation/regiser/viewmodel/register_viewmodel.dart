@@ -5,6 +5,7 @@ import 'package:advanced_project/domain/usecase/register_usecase.dart';
 import 'package:advanced_project/presentation/base/base_viewmodel.dart';
 import 'package:advanced_project/presentation/common/freezed_data_classes.dart';
 import 'package:advanced_project/presentation/resources/strings_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import '../../../app/functions.dart';
 import '../../common/state_renderer/state_renderer.dart';
@@ -168,21 +169,21 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
 
   @override
   Stream<String?> get outputErrorUserName => outputIsUserNameValid.map((isUserName) =>
-      isUserName? null : AppStrings.userNameInvalid);
+      isUserName? null : AppStrings.userNameInvalid.tr());
 
   @override
   Stream<bool> get outputIsEmailValid => emailStreamController.stream.map((email) => isEmailValid(email));
 
   @override
   Stream<String?> get outputErrorEmail => outputIsEmailValid.map((isEmailValid) =>
-  isEmailValid? null : AppStrings.invalidEmail);
+  isEmailValid? null : AppStrings.invalidEmail.tr());
 
   @override
   Stream<bool> get outputIsMobileNumberValid => mobileNumberStreamController.stream.map((mobileNumber) => _isMobileNumberValid(mobileNumber));
 
   @override
   Stream<String?> get outputErrorMobileNumber =>  outputIsMobileNumberValid.map((isMobileNumberValid) =>
-  isMobileNumberValid? null : AppStrings.mobileNumberInvalid);
+  isMobileNumberValid? null : AppStrings.mobileNumberInvalid.tr());
 
 
   @override
@@ -190,7 +191,7 @@ class RegisterViewModel extends BaseViewModel with RegisterViewModelInput, Regis
 
   @override
   Stream<String?> get outputErrorPassword => outputIsPasswordValid.map((isPasswordValid) =>
-  isPasswordValid? null : AppStrings.passwordInvalid);
+  isPasswordValid? null : AppStrings.passwordInvalid.tr());
 
 
   @override

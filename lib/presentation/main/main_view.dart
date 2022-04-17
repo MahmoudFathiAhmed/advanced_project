@@ -4,6 +4,7 @@ import 'package:advanced_project/presentation/main/pages/search/search_page.dart
 import 'package:advanced_project/presentation/main/pages/settings/settings_page.dart';
 import 'package:advanced_project/presentation/resources/color_manager.dart';
 import 'package:advanced_project/presentation/resources/values_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../resources/strings_manager.dart';
@@ -23,12 +24,12 @@ class _MainViewState extends State<MainView> {
     SettingsPage()
   ];
   List<String> titles=[
-    AppStrings.home,
-    AppStrings.search,
-    AppStrings.notifications,
-    AppStrings.settings
+    AppStrings.home.tr(),
+    AppStrings.search.tr(),
+    AppStrings.notifications.tr(),
+    AppStrings.settings.tr()
   ];
-  var _title = AppStrings.home;
+  var _title = AppStrings.home.tr();
   var _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -51,11 +52,11 @@ class _MainViewState extends State<MainView> {
           unselectedItemColor: ColorManager.grey,
           currentIndex: _currentIndex,
           onTap: onTab,
-          items: const[
-            BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: AppStrings.home),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: AppStrings.search),
-            BottomNavigationBarItem(icon: Icon(Icons.notifications), label: AppStrings.notifications),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: AppStrings.settings),
+          items: [
+            BottomNavigationBarItem(icon: const Icon(Icons.home_outlined), label: AppStrings.home.tr()),
+            BottomNavigationBarItem(icon: const Icon(Icons.search), label: AppStrings.search.tr()),
+            BottomNavigationBarItem(icon: const Icon(Icons.notifications), label: AppStrings.notifications.tr()),
+            BottomNavigationBarItem(icon: const Icon(Icons.settings), label: AppStrings.settings.tr()),
           ],
         ),
       ),
