@@ -41,6 +41,10 @@ class AppStrings{
   static const String details = "Details";
   static const String about = "About Store";
   static const String storeDetails = "Store details";
+  static const String changeLanguage = "Change language";
+  static const String contactUs = "Contact us";
+  static const String inviteFriends = "Invite friends";
+  static const String logOut = "Log out";
 
   static const loading = "Loading...";
   static const retryAgain = "Retry Again";
