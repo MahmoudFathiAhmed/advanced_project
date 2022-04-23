@@ -1,3 +1,4 @@
+import 'package:advanced_project/presentation/contact_us/contact_us_view.dart';
 import 'package:advanced_project/presentation/forgot_password/view/forgot_password_view.dart';
 import 'package:advanced_project/presentation/regiser/view/register_view.dart';
 import 'package:advanced_project/presentation/resources/strings_manager.dart';
@@ -19,6 +20,7 @@ class Routes{
   static const String onBoardingRoute = "/onBoarding";
   static const String mainRoute = "/main";
   static const String storeDetailsRoute = "/storeDetails";
+  static const String contactUsRoute = "/contactUs";
 }
 class RouteGenerator{
   static Route<dynamic> getRoute(RouteSettings settings){
@@ -42,6 +44,8 @@ class RouteGenerator{
       case Routes.storeDetailsRoute:
         initStoreDetailsModule();
         return MaterialPageRoute(builder: (_)=> const StoreDetailsView());
+      case Routes.contactUsRoute:
+        return MaterialPageRoute(builder: (_)=> const ContactUsView());
       default:
         return unDefinedRoute();
     }

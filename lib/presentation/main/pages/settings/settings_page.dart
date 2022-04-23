@@ -8,6 +8,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:share_plus/share_plus.dart';
 import 'dart:math' as math;
 
 import '../../../../app/di.dart';
@@ -97,10 +98,12 @@ class _SettingsPageState extends State<SettingsPage> {
 
   _contactUs(){
     // task(open any Page using url)
+Navigator.pushNamed(context, Routes.contactUsRoute);
   }
 
-  _inviteFriends(){
+  _inviteFriends()async{
     //task(share app name to friends)
+    await Share.share('AppName');
   }
 
   _logOut(){
