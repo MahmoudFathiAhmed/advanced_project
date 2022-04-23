@@ -1,5 +1,5 @@
-import 'package:advanced_project/app/app_prefs.dart';
-import 'package:advanced_project/app/constants.dart';
+import '../../app/app_prefs.dart';
+import '../../app/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

@@ -1,11 +1,11 @@
-import 'package:advanced_project/data/data_source/remote_data_source.dart';
-import 'package:advanced_project/data/mapper/mapper.dart';
-import 'package:advanced_project/data/network/error_handler.dart';
-import 'package:advanced_project/data/network/failure.dart';
-import 'package:advanced_project/data/network/network_info.dart';
-import 'package:advanced_project/data/network/requests.dart';
-import 'package:advanced_project/domain/model/models.dart';
-import 'package:advanced_project/domain/repository/repository.dart';
+import '../../data/data_source/remote_data_source.dart';
+import '../../data/mapper/mapper.dart';
+import '../../data/network/error_handler.dart';
+import '../../data/network/failure.dart';
+import '../../data/network/network_info.dart';
+import '../../data/network/requests.dart';
+import '../../domain/model/models.dart';
+import '../../domain/repository/repository.dart';
 import 'package:dartz/dartz.dart';
 
 import '../data_source/local_data_source.dart';

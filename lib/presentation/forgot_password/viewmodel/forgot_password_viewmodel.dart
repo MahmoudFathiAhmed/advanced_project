@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:advanced_project/domain/usecase/forgot_password_usecase.dart';
-import 'package:advanced_project/presentation/base/base_viewmodel.dart';
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer_impl.dart';
+import '../../../domain/usecase/forgot_password_usecase.dart';
+import '../../../presentation/base/base_viewmodel.dart';
+import '../../../presentation/common/state_renderer/state_renderer_impl.dart';
 
 import '../../../app/functions.dart';
 import '../../common/state_renderer/state_renderer.dart';

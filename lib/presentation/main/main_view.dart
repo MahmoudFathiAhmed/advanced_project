@@ -1,9 +1,9 @@
-import 'package:advanced_project/presentation/main/pages/home/view/home_page.dart';
-import 'package:advanced_project/presentation/main/pages/notification/notifications_page.dart';
-import 'package:advanced_project/presentation/main/pages/search/search_page.dart';
-import 'package:advanced_project/presentation/main/pages/settings/settings_page.dart';
-import 'package:advanced_project/presentation/resources/color_manager.dart';
-import 'package:advanced_project/presentation/resources/values_manager.dart';
+import '../../../presentation/main/pages/home/view/home_page.dart';
+import '../../../presentation/main/pages/notification/notifications_page.dart';
+import '../../../presentation/main/pages/search/search_page.dart';
+import '../../../presentation/main/pages/settings/settings_page.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/values_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

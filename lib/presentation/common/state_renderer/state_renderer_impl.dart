@@ -1,6 +1,6 @@
-import 'package:advanced_project/app/constants.dart';
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
+import '../../../app/constants.dart';
+import '../../../presentation/common/state_renderer/state_renderer.dart';
+import '../../../presentation/resources/strings_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

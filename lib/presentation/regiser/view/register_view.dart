@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:advanced_project/app/di.dart';
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer_impl.dart';
-import 'package:advanced_project/presentation/regiser/viewmodel/register_viewmodel.dart';
-import 'package:advanced_project/presentation/resources/color_manager.dart';
-import 'package:advanced_project/presentation/resources/values_manager.dart';
+import '../../../app/di.dart';
+import '../../../presentation/common/state_renderer/state_renderer_impl.dart';
+import '../../../presentation/regiser/viewmodel/register_viewmodel.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/values_manager.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

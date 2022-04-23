@@ -1,5 +1,5 @@
-import 'package:advanced_project/presentation/resources/language_manager.dart';
-import 'package:flutter/cupertino.dart';
+import '../../presentation/resources/language_manager.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String PREFS_KEY_LANG="PREFS_KEY_LANG";

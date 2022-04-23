@@ -1,7 +1,7 @@
-import 'package:advanced_project/presentation/resources/color_manager.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
-import 'package:advanced_project/presentation/resources/values_manager.dart';
-import 'package:advanced_project/presentation/store_details/viewmodel/store_details_viewmodel.dart';
+import '../../../../../presentation/resources/color_manager.dart';
+import '../../../../../presentation/resources/strings_manager.dart';
+import '../../../../../presentation/resources/values_manager.dart';
+import '../../../../../presentation/store_details/viewmodel/store_details_viewmodel.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

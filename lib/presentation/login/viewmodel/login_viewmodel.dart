@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:advanced_project/domain/usecase/login_usecase.dart';
-import 'package:advanced_project/presentation/base/base_viewmodel.dart';
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer.dart';
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer_impl.dart';
+import '../../../domain/usecase/login_usecase.dart';
+import '../../../presentation/base/base_viewmodel.dart';
+import '../../../presentation/common/state_renderer/state_renderer.dart';
+import '../../../presentation/common/state_renderer/state_renderer_impl.dart';
 
 import '../../common/freezed_data_classes.dart';
 

@@ -1,4 +1,4 @@
-import 'package:advanced_project/data/network/error_handler.dart';
+import '../../data/network/error_handler.dart';
 
 import '../response/responses.dart';
 

@@ -1,5 +1,5 @@
-import 'package:advanced_project/data/network/requests.dart';
-import 'package:advanced_project/domain/model/models.dart';
+import '../../data/network/requests.dart';
+import '../../domain/model/models.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../data/network/failure.dart';

@@ -1,7 +1,7 @@
-import 'package:advanced_project/data/network/failure.dart';
-import 'package:advanced_project/domain/model/models.dart';
-import 'package:advanced_project/domain/repository/repository.dart';
-import 'package:advanced_project/domain/usecase/base_usecase.dart';
+import '../../data/network/failure.dart';
+import '../../domain/model/models.dart';
+import '../../domain/repository/repository.dart';
+import '../../domain/usecase/base_usecase.dart';
 import 'package:dartz/dartz.dart';
 
 class HomeUseCase implements BaseUseCase<void, HomeObject>{

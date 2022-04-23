@@ -1,8 +1,8 @@
 import 'dart:async';
 
 
-import 'package:advanced_project/domain/model/models.dart';
-import 'package:advanced_project/presentation/base/base_viewmodel.dart';
+import '../../../domain/model/models.dart';
+import '../../../presentation/base/base_viewmodel.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../resources/assets_manager.dart';

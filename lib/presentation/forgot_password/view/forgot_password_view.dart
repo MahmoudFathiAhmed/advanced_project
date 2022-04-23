@@ -1,4 +1,4 @@
-import 'package:advanced_project/presentation/forgot_password/viewmodel/forgot_password_viewmodel.dart';
+import '../../../presentation/forgot_password/viewmodel/forgot_password_viewmodel.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,8 @@
-import 'package:advanced_project/presentation/contact_us/contact_us_view.dart';
-import 'package:advanced_project/presentation/forgot_password/view/forgot_password_view.dart';
-import 'package:advanced_project/presentation/regiser/view/register_view.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
-import 'package:advanced_project/presentation/splash/splash_view.dart';
+import '../../presentation/contact_us/contact_us_view.dart';
+import '../../presentation/forgot_password/view/forgot_password_view.dart';
+import '../../presentation/regiser/view/register_view.dart';
+import '../../presentation/resources/strings_manager.dart';
+import '../../presentation/splash/splash_view.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

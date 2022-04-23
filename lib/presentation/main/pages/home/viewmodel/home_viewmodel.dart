@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:ffi';
 
-import 'package:advanced_project/domain/model/models.dart';
-import 'package:advanced_project/domain/usecase/home_usecase.dart';
-import 'package:advanced_project/presentation/base/base_viewmodel.dart';
+import '../../../../../domain/model/models.dart';
+import '../../../../../domain/usecase/home_usecase.dart';
+import '../../../../../presentation/base/base_viewmodel.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../../../../common/state_renderer/state_renderer.dart';

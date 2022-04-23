@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:advanced_project/domain/usecase/register_usecase.dart';
-import 'package:advanced_project/presentation/base/base_viewmodel.dart';
-import 'package:advanced_project/presentation/common/freezed_data_classes.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
+import '../../../domain/usecase/register_usecase.dart';
+import '../../../presentation/base/base_viewmodel.dart';
+import '../../../presentation/common/freezed_data_classes.dart';
+import '../../../presentation/resources/strings_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../../app/functions.dart';

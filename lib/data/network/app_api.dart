@@ -1,5 +1,5 @@
-import 'package:advanced_project/app/constants.dart';
-import 'package:advanced_project/data/response/responses.dart';
+import '../../app/constants.dart';
+import '../../data/response/responses.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 part 'app_api.g.dart';

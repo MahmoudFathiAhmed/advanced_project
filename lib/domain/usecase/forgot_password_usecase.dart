@@ -1,5 +1,5 @@
-import 'package:advanced_project/data/network/failure.dart';
-import 'package:advanced_project/domain/usecase/base_usecase.dart';
+import '../../data/network/failure.dart';
+import '../../domain/usecase/base_usecase.dart';
 import 'package:dartz/dartz.dart';
 
 import '../repository/repository.dart';

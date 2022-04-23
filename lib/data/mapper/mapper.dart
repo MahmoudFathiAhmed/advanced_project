@@ -1,5 +1,5 @@
-import 'package:advanced_project/data/response/responses.dart';
-import 'package:advanced_project/app/extensions.dart';
+import '../../data/response/responses.dart';
+import '../../app/extensions.dart';
 import '../../app/constants.dart';
 import '../../domain/model/models.dart';
 

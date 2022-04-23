@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer_impl.dart';
+import '../../presentation/common/state_renderer/state_renderer_impl.dart';
 import 'package:rxdart/rxdart.dart';
 
 abstract class BaseViewModel extends BaseViewModelInputs with BaseViewModelOutputs{

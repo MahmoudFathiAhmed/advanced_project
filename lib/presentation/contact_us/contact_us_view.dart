@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:advanced_project/presentation/resources/color_manager.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
+import '../../presentation/resources/color_manager.dart';
+import '../../presentation/resources/strings_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';

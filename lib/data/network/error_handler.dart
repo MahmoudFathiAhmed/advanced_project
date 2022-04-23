@@ -1,5 +1,5 @@
-import 'package:advanced_project/data/network/failure.dart';
-import 'package:advanced_project/presentation/resources/strings_manager.dart';
+import '../../data/network/failure.dart';
+import '../../presentation/resources/strings_manager.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
 

@@ -1,8 +1,8 @@
-import 'package:advanced_project/presentation/common/state_renderer/state_renderer_impl.dart';
-import 'package:advanced_project/presentation/main/pages/home/viewmodel/home_viewmodel.dart';
-import 'package:advanced_project/presentation/resources/color_manager.dart';
-import 'package:advanced_project/presentation/resources/routes_manager.dart';
-import 'package:advanced_project/presentation/resources/values_manager.dart';
+import '../../../../../presentation/common/state_renderer/state_renderer_impl.dart';
+import '../../../../../presentation/main/pages/home/viewmodel/home_viewmodel.dart';
+import '../../../../../presentation/resources/color_manager.dart';
+import '../../../../../presentation/resources/routes_manager.dart';
+import '../../../../../presentation/resources/values_manager.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
